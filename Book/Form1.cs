@@ -14,14 +14,14 @@ using System.Windows.Forms;
 
 namespace Book
 {
-    public partial class Form1 : MetroForm
+    public partial class MainForm : MetroForm
     {
        
         string section = "";
         string topic = "";
         string subtopic = "";
         string dir = System.AppDomain.CurrentDomain.BaseDirectory;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             Gnostice.Documents.Framework.ActivateLicense("6B80-A0CD-33FC-F946-4C94-5977-0C48-D844-954F-AA31-8B04-6CC4");
@@ -95,40 +95,22 @@ namespace Book
             Image backImage = Image.FromFile(dir+@"img\background.jpg");
             panel1.BackgroundImage = SetImageOpacity(backImage, 0.17F);
             LoadPanels();
-            foreach (LinkLabel lb in panel1.Controls.OfType<LinkLabel>())
+            var c = GetAll(this, typeof(LinkLabel));
+            foreach (LinkLabel k in c)
             {
-                lb.LinkBehavior = LinkBehavior.NeverUnderline;
-            }
-            foreach (LinkLabel lb in panel2.Controls.OfType<LinkLabel>())
-            {
-                lb.LinkBehavior = LinkBehavior.NeverUnderline;
-            }
-            foreach (LinkLabel lb in panel3.Controls.OfType<LinkLabel>())
-            {
-                lb.LinkBehavior = LinkBehavior.NeverUnderline;
-            }
-            foreach (LinkLabel lb in panel4.Controls.OfType<LinkLabel>())
-            {
-                lb.LinkBehavior = LinkBehavior.NeverUnderline;
-            }
-            foreach (LinkLabel lb in panel6.Controls.OfType<LinkLabel>())
-            {
-                lb.LinkBehavior = LinkBehavior.NeverUnderline;
-            }
-            foreach (LinkLabel lb in panel8.Controls.OfType<LinkLabel>())
-            {
-                lb.LinkBehavior = LinkBehavior.NeverUnderline;
-            }
-            foreach (LinkLabel lb in metroTabPage1.Controls.OfType<LinkLabel>())
-            {
-                lb.LinkBehavior = LinkBehavior.NeverUnderline;
-            }
-            foreach (LinkLabel lb in metroTabPage2.Controls.OfType<LinkLabel>())
-            {
-                lb.LinkBehavior = LinkBehavior.NeverUnderline;
+                k.LinkBehavior = LinkBehavior.NeverUnderline;
             }
 
 
+        }
+
+        public IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -245,7 +227,7 @@ namespace Book
         {
             string linkLabelName = ((LinkLabel)sender).Name;
             subtopic = linkLabelName[3].ToString();
-            this.button4.Click += new System.EventHandler(toPanel4);
+            this.button4.Click += delegate { toPanel(sender, e, 4); };
             documentViewer1.LoadDocument(dir + @"/txt/" + section + @"/" + section + "." + topic + @"/" + section + "." + topic + "." + subtopic + ".docx");
             VisiblePanel("panel5");
         }
@@ -265,33 +247,6 @@ namespace Book
             VisiblePanel("panel6");
         }
 
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.button4.Click += new System.EventHandler(toPanel6);
-            documentViewer1.LoadDocument(dir + @"/txt/Курсовое проектирование/Рекомендации.docx");
-            VisiblePanel("panel5");
-        }
-        private void toPanel6(object sender, EventArgs e)
-        {
-            VisiblePanel("panel6");
-        }
-        private void toPanel4(object sender, EventArgs e)
-        {
-            VisiblePanel("panel4");
-        }
-        private void toPanel8(object sender, EventArgs e)
-        {
-            VisiblePanel("panel8");
-        }
-        private void toPanel7(object sender, EventArgs e)
-        {
-            VisiblePanel("panel7");
-        }
-        private void toPanel3(object sender, EventArgs e)
-        {
-            VisiblePanel("panel3");
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             VisiblePanel("panel6");
@@ -302,16 +257,27 @@ namespace Book
             VisiblePanel("panel7");
         }
 
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.button4.Click += delegate { toPanel(sender, e, 6); };
+            documentViewer1.LoadDocument(dir + @"/txt/Курсовое проектирование/Рекомендации.docx");
+            VisiblePanel("panel5");
+        }
+        private void toPanel(object sender, EventArgs e, int panelId)
+        {
+            VisiblePanel("panel"+panelId);
+        }
+       
         private void topicClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.button4.Click += new System.EventHandler(toPanel7);
+            this.button4.Click += delegate { toPanel(sender, e, 7); };
             documentViewer1.LoadDocument(dir + @"/txt/Курсовое проектирование/Темы/" + ((LinkLabel)sender).Name[1]+".docx");
             VisiblePanel("panel5");
         }
 
         private void l_10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.button4.Click += new System.EventHandler(toPanel3);
+            this.button4.Click += delegate { toPanel(sender, e, 3); };
             documentViewer1.LoadDocument(dir + @"/txt/" + section + "/Контроль знаний/Вопросы.docx");
             VisiblePanel("panel5");
         }
@@ -354,7 +320,7 @@ namespace Book
         {
             string linkLabelName = ((LinkLabel)sender).Name;
             string prNumber = linkLabelName[2].ToString();
-            this.button4.Click += new System.EventHandler(toPanel8);
+            this.button4.Click += delegate { toPanel(sender, e, 8); };
             documentViewer1.LoadDocument(dir + @"\txt\" + section + @"\" + section + "." + topic + @"\Практические занятия\"+prNumber+".docx");
             VisiblePanel("panel5");
         }
@@ -368,8 +334,11 @@ namespace Book
 
         private void topicClicked(object sender, EventArgs e)
         {
-            this.button4.Click += new System.EventHandler(toPanel7);
+            this.button4.Click += delegate { toPanel(sender, e, 7); };
+            if (((LinkLabel)sender).Name.Length==2)
             documentViewer1.LoadDocument(dir + @"/txt/Курсовое проектирование/Темы/" + ((LinkLabel)sender).Name[1] + ".docx");
+            else
+                documentViewer1.LoadDocument(dir + @"/txt/Курсовое проектирование/Темы/" + ((LinkLabel)sender).Name[1] + ((LinkLabel)sender).Name[2] + ".docx");
             VisiblePanel("panel5");
         }
     }

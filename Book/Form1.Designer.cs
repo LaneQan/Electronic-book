@@ -2,7 +2,7 @@
 
 namespace Book
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,19 @@ namespace Book
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Gnostice.Documents.FormatterSettings formatterSettings1 = new Gnostice.Documents.FormatterSettings();
-            Gnostice.Documents.Spreadsheet.SpreadSheetFormatterSettings spreadSheetFormatterSettings1 = new Gnostice.Documents.Spreadsheet.SpreadSheetFormatterSettings();
-            Gnostice.Documents.PageSettings pageSettings1 = new Gnostice.Documents.PageSettings();
-            Gnostice.Documents.Margins margins1 = new Gnostice.Documents.Margins();
-            Gnostice.Documents.TXTFormatterSettings txtFormatterSettings1 = new Gnostice.Documents.TXTFormatterSettings();
-            Gnostice.Documents.PageSettings pageSettings2 = new Gnostice.Documents.PageSettings();
-            Gnostice.Documents.Margins margins2 = new Gnostice.Documents.Margins();
-            Gnostice.Graphics.RenderingSettings renderingSettings1 = new Gnostice.Graphics.RenderingSettings();
-            Gnostice.Graphics.ImageRenderingSettings imageRenderingSettings1 = new Gnostice.Graphics.ImageRenderingSettings();
-            Gnostice.Graphics.LineArtRenderingSettings lineArtRenderingSettings1 = new Gnostice.Graphics.LineArtRenderingSettings();
-            Gnostice.Graphics.ResolutionSettings resolutionSettings1 = new Gnostice.Graphics.ResolutionSettings();
-            Gnostice.Graphics.TextRenderingSettings textRenderingSettings1 = new Gnostice.Graphics.TextRenderingSettings();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Gnostice.Documents.FormatterSettings formatterSettings2 = new Gnostice.Documents.FormatterSettings();
+            Gnostice.Documents.Spreadsheet.SpreadSheetFormatterSettings spreadSheetFormatterSettings2 = new Gnostice.Documents.Spreadsheet.SpreadSheetFormatterSettings();
+            Gnostice.Documents.PageSettings pageSettings3 = new Gnostice.Documents.PageSettings();
+            Gnostice.Documents.Margins margins3 = new Gnostice.Documents.Margins();
+            Gnostice.Documents.TXTFormatterSettings txtFormatterSettings2 = new Gnostice.Documents.TXTFormatterSettings();
+            Gnostice.Documents.PageSettings pageSettings4 = new Gnostice.Documents.PageSettings();
+            Gnostice.Documents.Margins margins4 = new Gnostice.Documents.Margins();
+            Gnostice.Graphics.RenderingSettings renderingSettings2 = new Gnostice.Graphics.RenderingSettings();
+            Gnostice.Graphics.ImageRenderingSettings imageRenderingSettings2 = new Gnostice.Graphics.ImageRenderingSettings();
+            Gnostice.Graphics.LineArtRenderingSettings lineArtRenderingSettings2 = new Gnostice.Graphics.LineArtRenderingSettings();
+            Gnostice.Graphics.ResolutionSettings resolutionSettings2 = new Gnostice.Graphics.ResolutionSettings();
+            Gnostice.Graphics.TextRenderingSettings textRenderingSettings2 = new Gnostice.Graphics.TextRenderingSettings();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -427,9 +427,9 @@ namespace Book
             this.panel4.Controls.Add(this.l__2);
             this.panel4.Controls.Add(this.l__1);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(262, 573);
+            this.panel4.Location = new System.Drawing.Point(253, 575);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(48, 51);
+            this.panel4.Size = new System.Drawing.Size(78, 64);
             this.panel4.TabIndex = 6;
             // 
             // linkLabel2
@@ -519,9 +519,9 @@ namespace Book
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.documentViewer1);
-            this.panel5.Location = new System.Drawing.Point(365, 579);
+            this.panel5.Location = new System.Drawing.Point(342, 572);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(76, 60);
+            this.panel5.Size = new System.Drawing.Size(73, 61);
             this.panel5.TabIndex = 7;
             // 
             // button4
@@ -560,53 +560,53 @@ namespace Book
             this.documentViewer1.NavigationPane.WidthPercentage = 20;
             this.documentViewer1.PageLayout = null;
             this.documentViewer1.PageRotation = Gnostice.Documents.Controls.WinForms.RotationAngle.Zero;
-            spreadSheetFormatterSettings1.GridLinesPrint = false;
-            spreadSheetFormatterSettings1.GridLinesView = false;
-            spreadSheetFormatterSettings1.PageOrder = Gnostice.Documents.Spreadsheet.LayoutDirection.BackwardN;
-            pageSettings1.Height = 11.6929F;
-            margins1.Bottom = 1F;
-            margins1.Footer = 0F;
-            margins1.Header = 0F;
-            margins1.Left = 1F;
-            margins1.Right = 1F;
-            margins1.Top = 1F;
-            pageSettings1.Margin = margins1;
-            pageSettings1.Orientation = Gnostice.Graphics.Orientation.Portrait;
-            pageSettings1.PageSize = Gnostice.Documents.PageSize.A4;
-            pageSettings1.Width = 8.2677F;
-            spreadSheetFormatterSettings1.PageSettings = pageSettings1;
-            formatterSettings1.SpreadSheet = spreadSheetFormatterSettings1;
-            txtFormatterSettings1.Font = new System.Drawing.Font("Calibri", 12F);
-            pageSettings2.Height = 11.6929F;
-            margins2.Bottom = 1F;
-            margins2.Footer = 0F;
-            margins2.Header = 0F;
-            margins2.Left = 1F;
-            margins2.Right = 1F;
-            margins2.Top = 1F;
-            pageSettings2.Margin = margins2;
-            pageSettings2.Orientation = Gnostice.Graphics.Orientation.Portrait;
-            pageSettings2.PageSize = Gnostice.Documents.PageSize.A4;
-            pageSettings2.Width = 8.2677F;
-            txtFormatterSettings1.PageSettings = pageSettings2;
-            formatterSettings1.TXT = txtFormatterSettings1;
-            this.documentViewer1.Preferences.FormatterSettings = formatterSettings1;
+            spreadSheetFormatterSettings2.GridLinesPrint = false;
+            spreadSheetFormatterSettings2.GridLinesView = false;
+            spreadSheetFormatterSettings2.PageOrder = Gnostice.Documents.Spreadsheet.LayoutDirection.BackwardN;
+            pageSettings3.Height = 11.6929F;
+            margins3.Bottom = 1F;
+            margins3.Footer = 0F;
+            margins3.Header = 0F;
+            margins3.Left = 1F;
+            margins3.Right = 1F;
+            margins3.Top = 1F;
+            pageSettings3.Margin = margins3;
+            pageSettings3.Orientation = Gnostice.Graphics.Orientation.Portrait;
+            pageSettings3.PageSize = Gnostice.Documents.PageSize.A4;
+            pageSettings3.Width = 8.2677F;
+            spreadSheetFormatterSettings2.PageSettings = pageSettings3;
+            formatterSettings2.SpreadSheet = spreadSheetFormatterSettings2;
+            txtFormatterSettings2.Font = new System.Drawing.Font("Calibri", 12F);
+            pageSettings4.Height = 11.6929F;
+            margins4.Bottom = 1F;
+            margins4.Footer = 0F;
+            margins4.Header = 0F;
+            margins4.Left = 1F;
+            margins4.Right = 1F;
+            margins4.Top = 1F;
+            pageSettings4.Margin = margins4;
+            pageSettings4.Orientation = Gnostice.Graphics.Orientation.Portrait;
+            pageSettings4.PageSize = Gnostice.Documents.PageSize.A4;
+            pageSettings4.Width = 8.2677F;
+            txtFormatterSettings2.PageSettings = pageSettings4;
+            formatterSettings2.TXT = txtFormatterSettings2;
+            this.documentViewer1.Preferences.FormatterSettings = formatterSettings2;
             this.documentViewer1.Preferences.KeyNavigation = true;
-            imageRenderingSettings1.CompositingMode = Gnostice.Graphics.CompositingMode.SourceOver;
-            imageRenderingSettings1.CompositingQuality = Gnostice.Graphics.CompositingQuality.HighQuality;
-            imageRenderingSettings1.InterpolationMode = Gnostice.Graphics.InterpolationMode.HighQualityBilinear;
-            imageRenderingSettings1.PixelOffsetMode = Gnostice.Graphics.PixelOffsetMode.Default;
-            renderingSettings1.Image = imageRenderingSettings1;
-            lineArtRenderingSettings1.SmoothingMode = Gnostice.Graphics.SmoothingMode.AntiAlias;
-            renderingSettings1.LineArt = lineArtRenderingSettings1;
-            resolutionSettings1.DpiX = 96F;
-            resolutionSettings1.DpiY = 96F;
-            resolutionSettings1.ResolutionMode = Gnostice.Graphics.ResolutionMode.UseSource;
-            renderingSettings1.Resolution = resolutionSettings1;
-            textRenderingSettings1.TextContrast = 3;
-            textRenderingSettings1.TextRenderingHint = Gnostice.Graphics.TextRenderingHint.AntiAlias;
-            renderingSettings1.Text = textRenderingSettings1;
-            this.documentViewer1.Preferences.RenderingSettings = renderingSettings1;
+            imageRenderingSettings2.CompositingMode = Gnostice.Graphics.CompositingMode.SourceOver;
+            imageRenderingSettings2.CompositingQuality = Gnostice.Graphics.CompositingQuality.HighQuality;
+            imageRenderingSettings2.InterpolationMode = Gnostice.Graphics.InterpolationMode.HighQualityBilinear;
+            imageRenderingSettings2.PixelOffsetMode = Gnostice.Graphics.PixelOffsetMode.Default;
+            renderingSettings2.Image = imageRenderingSettings2;
+            lineArtRenderingSettings2.SmoothingMode = Gnostice.Graphics.SmoothingMode.AntiAlias;
+            renderingSettings2.LineArt = lineArtRenderingSettings2;
+            resolutionSettings2.DpiX = 96F;
+            resolutionSettings2.DpiY = 96F;
+            resolutionSettings2.ResolutionMode = Gnostice.Graphics.ResolutionMode.UseSource;
+            renderingSettings2.Resolution = resolutionSettings2;
+            textRenderingSettings2.TextContrast = 3;
+            textRenderingSettings2.TextRenderingHint = Gnostice.Graphics.TextRenderingHint.AntiAlias;
+            renderingSettings2.Text = textRenderingSettings2;
+            this.documentViewer1.Preferences.RenderingSettings = renderingSettings2;
             this.documentViewer1.Preferences.Units = Gnostice.Graphics.MeasurementUnit.Inches;
             this.documentViewer1.Size = new System.Drawing.Size(999, 570);
             this.documentViewer1.TabIndex = 9;
@@ -622,9 +622,9 @@ namespace Book
             this.panel6.Controls.Add(this.button5);
             this.panel6.Controls.Add(this.linkLabel4);
             this.panel6.Controls.Add(this.linkLabel3);
-            this.panel6.Location = new System.Drawing.Point(479, 577);
+            this.panel6.Location = new System.Drawing.Point(463, 575);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(45, 51);
+            this.panel6.Size = new System.Drawing.Size(45, 41);
             this.panel6.TabIndex = 8;
             // 
             // button5
@@ -671,9 +671,9 @@ namespace Book
             // 
             this.panel7.Controls.Add(this.metroTabControl1);
             this.panel7.Controls.Add(this.button6);
-            this.panel7.Location = new System.Drawing.Point(562, 574);
+            this.panel7.Location = new System.Drawing.Point(54, 16);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(55, 59);
+            this.panel7.Size = new System.Drawing.Size(1040, 550);
             this.panel7.TabIndex = 9;
             // 
             // metroTabControl1
@@ -1270,7 +1270,7 @@ namespace Book
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1287,7 +1287,7 @@ namespace Book
             this.DisplayHeader = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.Text = "Электронная книга";
