@@ -148,9 +148,9 @@ namespace Book
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(23, 556);
+            this.panel1.Location = new System.Drawing.Point(11, 572);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(52, 45);
+            this.panel1.Size = new System.Drawing.Size(46, 40);
             this.panel1.TabIndex = 3;
             // 
             // metroButton1
@@ -182,10 +182,10 @@ namespace Book
             this.label2.Font = new System.Drawing.Font("Times New Roman", 30.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(70, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(867, 94);
+            this.label2.Size = new System.Drawing.Size(875, 94);
             this.label2.TabIndex = 3;
-            this.label2.Text = "          Электронный образовательный ресурс \r\n\"Маркетинговое исследование и мерч" +
-    "ендайзинг\"";
+            this.label2.Text = "          Электронный образовательный ресурс \r\n\"Маркетинговые исследования и мерч" +
+    "андайзинг\"";
             // 
             // panel2
             // 
@@ -296,9 +296,9 @@ namespace Book
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.contentButton2);
             this.panel3.Controls.Add(this.backButton2);
-            this.panel3.Location = new System.Drawing.Point(185, 572);
+            this.panel3.Location = new System.Drawing.Point(198, 566);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(52, 54);
+            this.panel3.Size = new System.Drawing.Size(43, 46);
             this.panel3.TabIndex = 5;
             // 
             // metroTabControl2
@@ -306,10 +306,10 @@ namespace Book
             this.metroTabControl2.Controls.Add(this.metroTabPage3);
             this.metroTabControl2.Controls.Add(this.metroTabPage4);
             this.metroTabControl2.Controls.Add(this.metroTabPage5);
-            this.metroTabControl2.Location = new System.Drawing.Point(66, 59);
+            this.metroTabControl2.Location = new System.Drawing.Point(46, 59);
             this.metroTabControl2.Name = "metroTabControl2";
             this.metroTabControl2.SelectedIndex = 0;
-            this.metroTabControl2.Size = new System.Drawing.Size(880, 509);
+            this.metroTabControl2.Size = new System.Drawing.Size(913, 509);
             this.metroTabControl2.TabIndex = 18;
             this.metroTabControl2.UseSelectable = true;
             // 
@@ -328,7 +328,7 @@ namespace Book
             this.metroTabPage3.HorizontalScrollbarSize = 10;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(872, 467);
+            this.metroTabPage3.Size = new System.Drawing.Size(905, 467);
             this.metroTabPage3.TabIndex = 0;
             this.metroTabPage3.Text = "Лекции";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
@@ -597,7 +597,7 @@ namespace Book
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(64, 20);
+            this.label6.Location = new System.Drawing.Point(46, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(552, 36);
             this.label6.TabIndex = 17;
@@ -634,9 +634,9 @@ namespace Book
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.contentButton4);
             this.panel4.Controls.Add(this.backButton3);
-            this.panel4.Location = new System.Drawing.Point(469, 575);
+            this.panel4.Location = new System.Drawing.Point(277, 572);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(58, 53);
+            this.panel4.Size = new System.Drawing.Size(54, 46);
             this.panel4.TabIndex = 6;
             // 
             // metroTabControl1
@@ -644,7 +644,7 @@ namespace Book
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage6);
-            this.metroTabControl1.Location = new System.Drawing.Point(66, 59);
+            this.metroTabControl1.Location = new System.Drawing.Point(46, 59);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(880, 509);
@@ -1005,7 +1005,7 @@ namespace Book
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(64, 20);
+            this.label5.Location = new System.Drawing.Point(46, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(707, 36);
             this.label5.TabIndex = 19;
